@@ -1,0 +1,6 @@
+.hero > div {
+    height: 60dvh;
+    background-size: cover;
+    color: #ffffff;
+    font-weight: bold;
+}
