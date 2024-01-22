@@ -22,7 +22,7 @@ Route::get('about', function(){
     return view('about');
 })->name('about.page');
 
-Route::get('products', [PagesController::class, "get_products"]);
+Route::get('products', [PagesController::class, "get_products"])->name('product.page');
 Route::get('products/{name}', [PagesController::class, 'show_product']);
 
 Route::get('products/{name}/{model}', [PagesController::class, 'show_product'])->where([
@@ -43,6 +43,9 @@ Route::get('library/{book}/{chapter}', [PagesController::class, 'library'])->whe
     4. patch
     5. delete
 */ 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('contact', [PagesController::class, 'pro'])->where([
+    'name' => "[a-zA-Z]"
+])->name('contact.page');
