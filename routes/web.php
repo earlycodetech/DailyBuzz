@@ -46,3 +46,6 @@ Route::get('library/{book}/{chapter}', [PagesController::class, 'library'])->whe
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('contact', [PagesController::class, 'contact'])->name('contact.page');
