@@ -48,4 +48,8 @@ class PagesController extends Controller
     {
         return view('book');
     }
+    public function view()
+    {
+        return view('view');
+    }
 }
