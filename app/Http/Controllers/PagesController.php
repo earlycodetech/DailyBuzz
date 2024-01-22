@@ -41,12 +41,16 @@ class PagesController extends Controller
         }else {
             $price = 0;
         }
-        return view('products', compact('price', 'name'));
+        //return view('products', compact('price', 'name'));
     }
 
     public function library($book,$chapter)
     {
-        return view('book');
+        //return view('book');
+    }
+
+    public function pro(){
+        return view('contact');
     }
     public function view()
     {
