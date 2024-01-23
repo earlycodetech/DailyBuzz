@@ -35,6 +35,9 @@ Route::get('library/{book}/{chapter}', [PagesController::class, 'library'])->whe
     'book' => "[a-zA-Z]+",
     'chapter' => "[0-9]+"
 ]);
+Route::get('view', [PagesController::class, 'view'])->where([
+    
+]);
 
 /*
     1. get

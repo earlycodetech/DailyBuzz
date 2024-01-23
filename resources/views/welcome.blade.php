@@ -26,7 +26,7 @@
                             <p class="fw-semibold">
                                 12th Jun. 2023
                             </p>
-                            <a href="" class="btn btn-info rounded-pill w-100">
+                            <a href="{{ url('view') }}" class="btn btn-info rounded-pill w-100">
                                 Read Post
                             </a>
                         </div>
