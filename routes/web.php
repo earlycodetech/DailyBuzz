@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\CatagoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
@@ -52,3 +54,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('contact', [PagesController::class, 'contact'])->name('contact.page');
+
+Route::resource('categories', CatagoriesController::class);
