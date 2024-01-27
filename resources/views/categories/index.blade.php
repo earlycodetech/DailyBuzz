@@ -20,19 +20,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Good </td>
-                            <td>27th Jun. 2023 </td>
-                            <td>3 mins ago</td>
-                            <td class="d-flex gap-3 align-items-center">
-                                <a href="" class="btn btn-sm btn-primary">Edit</a>
-                                <form action="">
-                                    <button class="btn btn-danger btn-sm">
-                                        Delete
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
+                        @forelse ($categories  as  $cat)
+                            <tr>
+                                <td> {{ $cat->name }} </td>
+                                <td> {{ $cat->created_at->format('jS M. Y h:i a') }} </td>
+                                <td> {{ $cat->updated_at->diffForHumans() }} </td>
+                                <td class="d-flex gap-3 align-items-center">
+                                    <a href="{{ route('categories.edit', ['category' => $cat->slug]) }}" class="btn btn-sm btn-primary">Edit</a>
+                                    <form action="">
+                                        <button class="btn btn-danger btn-sm">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td>No Record Found</td>
+                            </tr>
+                        @endforelse
+
                     </tbody>
                 </table>
             </div>
