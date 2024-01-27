@@ -34,22 +34,22 @@
                         
                         <div class="row">
                           <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
-                            <div class="card border-0 shadow bg-black rounded-pill">
-                              <a href="{{ url('view') }}" class="bg-danger-subtle text-center">
+                            <div class="card border-0 shadow  rounded-pill">
+                              <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                                Like
                           </a>
                           </div>
                           </div>
                           <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
-                            <div class="card border-0 shadow bg-black rounded-pill">
-                              <a href="{{ url('view') }}" class="bg-danger-subtle text-center ">
+                            <div class="card border-0 shadow  rounded-pill">
+                              <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                               comment
                           </a>
                           </div>
                           </div>
                           <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
                           <div class="card border-0 shadow bg-danger-subtle rounded-pill">
-                            <a href="{{ url('view') }}" class="bg-danger-subtle text-center">
+                            <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                               share
                           </a>
                           </div>
@@ -76,22 +76,22 @@
                             
                             <div class="row">
                               <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
-                                <div class="card border-0 shadow bg-black rounded-pill">
-                                  <a href="{{ url('view') }}" class="bg-danger-subtle text-center">
+                                <div class="card border-0 shadow  rounded-pill">
+                                  <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                                    Like
                               </a>
                               </div>
                               </div>
                               <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
-                                <div class="card border-0 shadow bg-black rounded-pill">
-                                  <a href="{{ url('view') }}" class="bg-danger-subtle text-center ">
+                                <div class="card border-0 shadow  rounded-pill">
+                                  <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0 ">
                                   comment
                               </a>
                               </div>
                               </div>
                               <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
                               <div class="card border-0 shadow bg-danger-subtle rounded-pill">
-                                <a href="{{ url('view') }}" class="bg-danger-subtle text-center">
+                                <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                                   share
                               </a>
                               </div>
@@ -117,22 +117,22 @@
                           
                           <div class="row">
                             <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
-                              <div class="card border-0 shadow bg-black rounded-pill">
-                                <a href="{{ url('view') }}" class="bg-danger-subtle text-center">
+                              <div class="card border-0 shadow  rounded-pill">
+                                <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                                  Like
                             </a>
                             </div>
                             </div>
                             <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
-                              <div class="card border-0 shadow bg-black rounded-pill">
-                                <a href="{{ url('view') }}" class="bg-danger-subtle text-center ">
+                              <div class="card border-0 shadow  rounded-pill">
+                                <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                                 comment
                             </a>
                             </div>
                             </div>
                             <div class="col-md-6 col-lg-4 bg-danger-subtle rounded-pill">
                             <div class="card border-0 shadow bg-danger-subtle rounded-pill">
-                              <a href="{{ url('view') }}" class="bg-danger-subtle text-center">
+                              <a href="{{ url('view') }}" class="bg-danger-subtle text-center rounded-pill link-dark link-underline-opacity-0">
                                 share
                             </a>
                             </div>

@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\CatagoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
@@ -49,3 +51,5 @@ Route::get('view', [PagesController::class, 'view'])->where([
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+route::resource('categories',CatagoriesController::class);
+
