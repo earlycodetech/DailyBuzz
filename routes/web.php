@@ -51,5 +51,8 @@ Route::get('view', [PagesController::class, 'view'])->where([
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-route::resource('categories',CatagoriesController::class);
 
+
+Route::get('contact', [PagesController::class, 'contact'])->name('contact.page');
+
+Route::resource('categories', CatagoriesController::class);

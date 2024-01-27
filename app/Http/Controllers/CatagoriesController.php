@@ -11,7 +11,7 @@ class CatagoriesController extends Controller
      */
     public function index()
     {
-        return view('catagories.index');
+        return view('categories.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class CatagoriesController extends Controller
      */
     public function create()
     {
-        return view('catagories.create');
+        return view('categories.create');
     }
 
     /**
