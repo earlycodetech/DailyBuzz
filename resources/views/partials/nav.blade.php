@@ -14,7 +14,7 @@
                     <a href="" class="nav-link"> Latest Post </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link"> Categories </a>
+                    <a href="{{ route('categories.index') }}" class="nav-link"> Categories </a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link"> Contact Us </a>

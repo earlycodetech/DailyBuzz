@@ -11,7 +11,7 @@ class CatagoriesController extends Controller
      */
     public function index()
     {
-        //
+        return view('categories.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class CatagoriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**
@@ -27,7 +27,9 @@ class CatagoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'category_name' => "required|string|max:100",
+        ]);
     }
 
     /**
