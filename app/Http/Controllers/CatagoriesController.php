@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CatagoriesController extends Controller
 {
@@ -28,8 +30,19 @@ class CatagoriesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category_name' => "required|string|max:100",
+            'category_name' => "required|string|max:100|unique:categories,name",
         ]);
+
+        $catName = $request->input('category_name');
+        $catSlug = Str::slug($catName, "-");
+
+
+        Category::create([
+            'name' => $catName,
+            'slug' => $catSlug
+        ]);
+
+        return back()->with('success', "Category Created");
     }
 
     /**
