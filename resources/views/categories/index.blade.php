@@ -10,6 +10,11 @@
 
 
             <div class="my-5 table-responsive">
+                
+                @if ($msg =  Session::get('success'))
+                    <p class="alert alert-success"> {{ $msg }}  </p>
+                @endif
+                
                 <table class="table">
                     <thead>
                         <tr>
@@ -27,7 +32,9 @@
                                 <td> {{ $cat->updated_at->diffForHumans() }} </td>
                                 <td class="d-flex gap-3 align-items-center">
                                     <a href="{{ route('categories.edit', ['category' => $cat->slug]) }}" class="btn btn-sm btn-primary">Edit</a>
-                                    <form action="">
+                                    <form action="{{ route('categories.destroy', ['category' => $cat->slug]) }}" method="POST" onsubmit="return confirm('Are you sure?')">
+                                        @csrf
+                                        @method('DELETE')
                                         <button class="btn btn-danger btn-sm">
                                             Delete
                                         </button>
