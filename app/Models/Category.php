@@ -23,4 +23,10 @@ class Category extends Model
     protected $casts = [
         'id'=> 'integer',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'category_id');
+        // return $this->hasMany(related: Post::class, foreignKey: 'category_id');
+    }
 }
