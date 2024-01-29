@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -29,7 +31,39 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'category' => "required|numeric|exists:categories,id",
+            'title' => "required|string|unique:posts,title|max:255",
+            'cover' => "required|image|mimes:png,jpg,jpeg|max:2028",
+            'content' => "required|max:4000|string"
+        ]);
+
+
+        // 1. Get the file
+        $file = $request->file('cover');
+
+        // 2. Get the file extension
+        $ext =  $file->extension();
+
+        // 3. Create a new name for the file
+        $fileName= time() .'_'. mt_rand() ."_update." . $ext;
+
+        // 4. Move the uploaded file
+        $path =  public_path("uploads");
+        $file->move($path, $fileName);
+
+
+        $slug =  Str::slug($request->input('title'), "-");
+        Post::create([
+            'category_id' => $request->input('category'),
+            'title' => $request->input('title'),
+            'slug' => $slug,
+            'cover' => "uploads/". $fileName,
+            'content' => $request->input('content'),
+            
+        ]);
+
+        return back()->with('success', "Post Created");
     }
 
     /**
