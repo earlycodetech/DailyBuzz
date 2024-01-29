@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <div class="container my-5 bg-white p-5">
+
+        <div class="text-end">
+            <a href="{{ route('posts.create') }}" class="btn btn-primary">New Post</a>
+        </div>
         <div class="row">
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 shadow">

@@ -4,6 +4,16 @@
         <h3>Create a new post</h3>
         <div class="row">
             <div class="col-md-6 mb-3">
+                <label for="">Category</label>
+                <select name="" class="form-select">
+                    @forelse ($categories as $cat)
+                        <option value="{{ $cat->id }}"> {{ $cat->name }}  </option>
+                    @empty
+                        <option disabled>No Categories Available</option>
+                    @endforelse
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
                 <label for="">Title</label>
                 <input type="text" name="title" class="form-control">
             </div>
