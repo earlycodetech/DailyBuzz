@@ -23,14 +23,14 @@
             </div>
             <div class="col-md-6 mb-3">
                 <label for="">Title</label>
-                <input type="text" name="title" class="form-control">
+                <input type="text" name="title" value="{{ old('title') }}" class="form-control">
                 @error('title')
                     <p class="small fw-bold text-danger"> Error: {{ $message }} </p>
                 @enderror
             </div>
             <div class="col-md-6 mb-3">
                 <label for="">Cover</label>
-                <input type="file" name="cover" capture="" class="form-control">
+                <input type="file" name="cover"  class="form-control">
                 @error('cover')
                     <p class="small fw-bold text-danger"> Error: {{ $message }} </p>
                 @enderror
@@ -40,7 +40,7 @@
                     <p class="small fw-bold text-danger"> Error: {{ $message }} </p>
                 @enderror
                 <label for=""> Post </label>
-                <textarea name="content" rows="10" class="form-control"></textarea>
+                <textarea name="content" rows="10" class="form-control">{{ old('content') }}</textarea>
             </div>
 
             <div class="col-12 my-3">
