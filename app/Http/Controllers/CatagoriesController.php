@@ -8,6 +8,12 @@ use Illuminate\Support\Str;
 
 class CatagoriesController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware(['auth', 'admin.check']);
+    }
     /**
      * Display a listing of the resource.
      */

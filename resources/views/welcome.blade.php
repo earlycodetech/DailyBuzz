@@ -12,26 +12,34 @@
     <section>
         <div class="container my-5">
             <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow">
-                        <img src="{{ asset('images/video-bg.png') }}" class="card-img-top" alt="">
+            @forelse ($posts as $item)
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow">
+                    <img src="{{ asset($item->cover) }}" class="card-img-top object-fit-cover" style="height: 200px;" alt="">
 
-                        <div class="card-body">
-                            <p class="h4 fw-semibold">
-                                This is the title
-                            </p>
-                            <p class="fw-semibold">
-                                Author: Jeremy Smith
-                            </p>
-                            <p class="fw-semibold">
-                                12th Jun. 2023
-                            </p>
-                            <a href="{{ url('view') }}" class="btn btn-info rounded-pill w-100">
-                                Read Post
-                            </a>
-                        </div>
+                    <div class="card-body">
+                        <p class="h4 fw-semibold">
+                            {{ $item->title }}
+                        </p>
+                        <p class="fw-semibold">
+                            {{ $item->created_at->format('jS M. Y') }}
+                        </p>
+                        <a href="{{ route('read.post', ['slug' => $item->slug]) }}" class="btn btn-info rounded-pill w-100">
+                            Read Post
+                        </a>
                     </div>
                 </div>
+            </div>
+            @empty
+                <p class="p-5 text-center fs-5">
+                    Comming Soon...
+                </p>
+            @endforelse
+            </div>
+
+
+            <div class="p-2">
+                {!! $posts->links('pagination::bootstrap-5') !!}
             </div>
         </div>
     </section>

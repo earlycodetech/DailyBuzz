@@ -4,6 +4,7 @@ use App\Http\Controllers\CatagoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,7 @@ Route::get('library/{book}/{chapter}', [PagesController::class, 'library'])->whe
     'book' => "[a-zA-Z]+",
     'chapter' => "[0-9]+"
 ]);
-Route::get('view', [PagesController::class, 'view'])->where([
-    
-]);
+Route::get('view/{slug}', [PagesController::class, 'view'])->name('read.post');
 
 /*
     1. get

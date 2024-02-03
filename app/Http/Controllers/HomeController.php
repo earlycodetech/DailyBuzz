@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = auth()->user();
+        if ($user->role == 'admin') {
+           return redirect()->route('posts.index');
+        }else{
+            return redirect('/');
+        }
+
         return view('home');
     }
 }

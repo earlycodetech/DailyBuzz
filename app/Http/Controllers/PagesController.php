@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        $items = ['pencil', 'shoes', 'bag', 'calaculator', 'books', 'textbooks'];
+        $posts = Post::latest()->paginate(10);
         // $items = [];
-        return view('welcome', compact('items'));
+        return view('welcome', compact('posts'));
     }
 
 
@@ -52,8 +53,10 @@ class PagesController extends Controller
     public function pro(){
         return view('contact');
     }
-    public function view()
+    public function view($slug)
     {
-        return view('view');
+
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('view', compact('post'));
     }
 }
